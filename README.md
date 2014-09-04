@@ -5,7 +5,7 @@ jquery-component
 
 ##jquery-simple-slider
   
->config
+>config  
 width: Number  
 height: Number  
 duration: Number (ms)  
