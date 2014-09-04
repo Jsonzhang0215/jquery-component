@@ -6,9 +6,9 @@ jquery-component
 ##jquery-simple-slider
   
 >config
-width: Number
-height: Number
-duration: Number (ms)
-autoPlay: Bool
-hhasControl: Bool
-hasTrnPageBtn: Bool
+width: Number  
+height: Number  
+duration: Number (ms)  
+autoPlay: Bool  
+hhasControl: Bool  
+hasTrnPageBtn: Bool  
