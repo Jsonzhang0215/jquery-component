@@ -1,10 +1,10 @@
 jquery-component
 ================
 
+#日常通用组件
+
 ###Depends:  
 jquery-1.11.0  
-
-日常通用组件
 
 ##jquery-simple-slider
 ```javascript  
