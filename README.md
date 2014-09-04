@@ -5,8 +5,8 @@ jquery-component
 
 ##jquery-simple-slider
   
->config  
-width: Number  
+###config  
+>width: Number  
 height: Number  
 duration: Number (ms)  
 autoPlay: Bool  
