@@ -6,11 +6,11 @@ jquery-component
 ##jquery-simple-slider
   
 >banner
-    var config = {
-        width: 670,
-        height: 240
-    };
-    var slider =  new SimpleSlider($("#slider"),config);
+>    var config = {
+>        width: 670,
+>        height: 240
+>    };
+>    var slider =  new SimpleSlider($("#slider"),config);
 
 >config
 width: Number
