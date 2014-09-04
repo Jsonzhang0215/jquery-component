@@ -19,5 +19,5 @@ var slider =  new SimpleSlider($("#slider"),config);
 height: Number  
 duration: Number (ms)  
 autoPlay: Bool  
-hhasControl: Bool  
+hasControl: Bool  
 hasTrnPageBtn: Bool  
