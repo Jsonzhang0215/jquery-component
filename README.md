@@ -1,7 +1,7 @@
 jquery-component
 ================
 
-depends:  
+###Depends:  
 jquery-1.11.0  
 
 日常通用组件
