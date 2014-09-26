@@ -22,9 +22,9 @@ function SimpleSlider(slider, cfg){
     this.sliderPrev = $(".simple-slider-prev", this.slider);
     this.sliderNext = $(".simple-slider-next", this.slider);
     this.config = $.extend(this._config, cfg);
-    this.sliderListItemWidth = this.sliderListItems.eq(0).width();
+    this.sliderListItemWidth = this.config.width;
     this.init();
-}
+};
 
 SimpleSlider.prototype = {
     moveTo :  function (index){
