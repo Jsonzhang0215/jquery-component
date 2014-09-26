@@ -48,6 +48,9 @@ SimpleSlider.prototype = {
     },
     render : function (){
 
+        //reset slider width & height
+        this.slider.css({"width": this.config.width, "height": this.config.height});
+
         //set list width
         this.sliderList.css({"width" : this.sliderListItems.length * this.sliderListItemWidth });
 
