@@ -11,7 +11,8 @@
 </head>
 <body>
     <div class="warp">
-        <div id="slider" class="simple-slider">
+        <h1>Defalut (only change width&height)</h1>
+        <div id="slider1" class="simple-slider">
             <div class="simple-slider-warp">
                 <ul class="simple-slider-list">
                     <li class="simple-slider-list-item"><a href="javascript:;"><img src="images/slider-1.jpg" alt=""/></a></li>
@@ -22,22 +23,39 @@
                     <li class="simple-slider-list-item"><a href="javascript:;"><img src="images/slider-3.jpg" alt=""/></a></li>
                 </ul>
             </div>
-            <!-- <ul class="simple-slider-control">
-                <li class="simple-slider-control-item active">1</li>
-                <li class="simple-slider-control-item">2</li>
-                <li class="simple-slider-control-item">3</li>
-            </ul> -->
+            <a class="simple-slider-prev" href="javascript:;"></a>
+            <a class="simple-slider-next" href="javascript:;"></a>
+        </div>
+
+        <h1>No control buttons</h1>
+        <div id="slider2" class="simple-slider">
+            <div class="simple-slider-warp">
+                <ul class="simple-slider-list">
+                    <li class="simple-slider-list-item"><a href="javascript:;"><img src="images/slider-1.jpg" alt=""/></a></li>
+                    <li class="simple-slider-list-item"><a href="javascript:;"><img src="images/slider-2.jpg" alt=""/></a></li>
+                    <li class="simple-slider-list-item"><a href="javascript:;"><img src="images/slider-3.jpg" alt=""/></a></li>
+                    <li class="simple-slider-list-item"><a href="javascript:;"><img src="images/slider-1.jpg" alt=""/></a></li>
+                    <li class="simple-slider-list-item"><a href="javascript:;"><img src="images/slider-2.jpg" alt=""/></a></li>
+                    <li class="simple-slider-list-item"><a href="javascript:;"><img src="images/slider-3.jpg" alt=""/></a></li>
+                </ul>
+            </div>
             <a class="simple-slider-prev" href="javascript:;"></a>
             <a class="simple-slider-next" href="javascript:;"></a>
         </div>
     </div>
     <script>
         $(function(){
-            var config = {
+            var config1 = {
                 width: 670,
                 height: 240
             };
-            var slider =  new SimpleSlider($("#slider"),config);
+            var config2 = {
+                width: 670,
+                height: 240,
+                hasControl: false
+            }
+            var slider1 =  new SimpleSlider($("#slider1"),config1);
+            var slider2 =  new SimpleSlider($("#slider2"),config2);
         });
     </script>
 </body>
