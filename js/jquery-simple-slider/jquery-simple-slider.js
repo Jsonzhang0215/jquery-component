@@ -17,11 +17,13 @@ function SimpleSlider(slider, cfg){
     };
     this.slider = slider;
     this.sliderList = $(".simple-slider-list", slider);
-    this.sliderListItems = $(".simple-slider-list-item", this.sliderList);
-    this.sliderControl = $(".simple-slider-control", this.slider);
+    this.sliderListItems = $(".simple-slider-list-item", this.sliderList); 
     this.sliderPrev = $(".simple-slider-prev", this.slider);
     this.sliderNext = $(".simple-slider-next", this.slider);
     this.config = $.extend(this._config, cfg);
+    if(this.config.hasControl){
+        this.sliderControl = $("<ul></ul>").addClass("simple-slider-control");
+    }
     this.sliderListItemWidth = this.config.width;
     this.init();
 };
@@ -29,8 +31,10 @@ function SimpleSlider(slider, cfg){
 SimpleSlider.prototype = {
     moveTo :  function (index){
         this.sliderList.stop().animate({ "left" : -index * this.sliderListItemWidth });
-        this.sliderControlItems.removeClass("active");
-        this.sliderControlItems.eq(this._index).addClass("active");
+        if(this.config.hasControl){
+            this.sliderControlItems.removeClass("active");
+            this.sliderControlItems.eq(this._index).addClass("active");
+        }
     },
     moveLeft : function (){
         this._index--;
@@ -58,16 +62,20 @@ SimpleSlider.prototype = {
         this.sliderListItems.css({ width: this.config.width, height : this.config.height });
 
         //build control item
-        this.sliderControl.html("");
-        for ( var i=0; i < this.sliderListItems.length; i++){
-            var newControlItem = $("<li></li>");
-            newControlItem.addClass("simple-slider-control-item").html( i+1 );
-            if( i == 0){
-                newControlItem.addClass("active");
+        if(this.config.hasControl){
+            for ( var i=0; i < this.sliderListItems.length; i++){
+                var newControlItem = $("<li></li>");
+                newControlItem.addClass("simple-slider-control-item").html( i+1 );
+                if( i == 0){
+                    newControlItem.addClass("active");
+                }
+                this.sliderControl.append(newControlItem);
             }
-            this.sliderControl.append(newControlItem);
+            this.sliderControlItems = $(".simple-slider-control-item", this.sliderControl);
+            this.bind();
+            this.slider.append(this.sliderControl);
         }
-        this.sliderControlItems = $(".simple-slider-control-item", this.sliderControl);
+        
     },
     bind : function (){
 
@@ -131,13 +139,13 @@ SimpleSlider.prototype = {
             });
         }
 
-        //check control config
+       /* //check control config
         if( _this.config.hasControl ){
             _this.sliderControl.show();
             _this.bind();
         }
         else{
             _this.sliderControl.hide();
-        }
+        }*/
     }
 };
