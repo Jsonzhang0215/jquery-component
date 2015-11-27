@@ -20,4 +20,4 @@ height: Number
 duration: Number (ms)  
 autoPlay: Bool  
 hasControl: Bool  
-hasTrnPageBtn: Bool  
+hasTurnPageBtn: Bool  
